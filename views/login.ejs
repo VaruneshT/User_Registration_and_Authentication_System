@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #6c5ce7; /* Updated to a purple shade */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 2px solid #6c5ce7; /* Updated to a purple shade */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #6c5ce7; /* Updated to a purple shade */
+    border-color: #6c5ce7;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #5a4cad; /* A darker purple for hover effect */
+    border-color: #5a4cad;
+}
+
+.card-footer {
+    background-color: #f4f4f4;
+    border-top: 2px solid #6c5ce7; /* Updated to a purple shade */
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.card-footer a {
+    color: #6c5ce7; /* Updated to a purple shade */
+    font-weight: bold;
+}
+
+.card-footer a:hover {
+    text-decoration: underline;
+}
+
+.form-control:hover, .form-control:focus {
+    outline: none;
+    box-shadow: inset -2px -2px 5px #ffffff,
+                inset 2px 2px 5px rgba(174, 170, 192, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #5a4cad;
+    box-shadow: none;
+}
+
+.form-control, .btn-primary {
+    background: #e0e5ec;
+    border: none;
+    box-shadow: -8px -8px 15px #ffffff,
+                 8px 8px 15px rgba(174, 170, 192, 0.4);
+}
+
+.btn-primary {
+    color: #6c5ce7;
+    box-shadow: -2px -2px 5px #ffffff,
+                 2px 2px 5px rgba(174, 170, 192, 0.4);
+}
+
+.container {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate3d(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: 800px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text-center">Login</h1>
+                    </div>
+                    <div class="card-body">
+                        <form action="/login" method="POST">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <small>Don't have an account? <a href="/signup">Signup here</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

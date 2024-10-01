@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #6c5ce7;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-control {
+            border: 2px solid #6c5ce7;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #6c5ce7;
+            border-color: #6c5ce7;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #6c5ce7;
+            box-shadow: -2px -2px 5px #ffffff, 2px 2px 5px rgba(174, 170, 192, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #5a4cad;
+            border-color: #5a4cad;
+            box-shadow: none;
+        }
+
+        .card-footer {
+            background-color: #f4f4f4;
+            border-top: 2px solid #6c5ce7;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+        }
+
+        .card-footer a {
+            color: #6c5ce7;
+            font-weight: bold;
+        }
+
+        .card-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .form-control:hover,
+        .form-control:focus {
+            outline: none;
+            box-shadow: inset -2px -2px 5px #ffffff, inset 2px 2px 5px rgba(174, 170, 192, 0.4);
+        }
+
+        .form-control,
+        .btn-primary {
+            background: #e0e5ec;
+            border: none;
+            box-shadow: -8px -8px 15px #ffffff, 8px 8px 15px rgba(174, 170, 192, 0.4);
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            background-color: #8A2BE2; /* Violet color */
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Signup</h1>
+        <form action="/signup" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Signup</button>
+        </form>
+        <div class="card-footer text-center">
+            <small>Already have an account? <a href="/">Login here</a></small>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 2px solid #ddd;
+            font-size: 16px;
+            color: #555;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button, .button-container form button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 123, 255, 0.5);
+            margin-bottom: 10px;
+            border: none;
+        }
+
+        .button:hover, .button-container form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>User Details</h1>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Username:</td>
+                <td><%= user.username %></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><%= user.email %></td>
+            </tr>
+            <tr>
+                <td>Phone:</td>
+                <td><%= user.phone %></td>
+            </tr>
+        </table>
+        <div class="button-container">
+            <form action="/updateForm" method="GET">
+                <input type="hidden" name="username" value="<%= user.username %>">
+                <button type="submit" class="button">Update</button>
+            </form>
+            <form action="/delete" method="POST">
+                <input type="hidden" name="username" value="<%= user.username %>">
+                <button type="submit" class="button">Delete</button>
+            </form>
+            <a href="/" class="button">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>
